@@ -3,7 +3,7 @@ import requests
 from tronpy import Tron
 
 # 配置
-TOKEN = os.environ.get("BOT_TOKEN")
+TOKEN = os.environ.get(BOT_TOKEN)
 API_URL = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
 
 client = Tron() # 默认连接主网
