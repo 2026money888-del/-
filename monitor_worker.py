@@ -1,10 +1,11 @@
+import os      # <--- 必须加上这一行！
 import time
 import requests
 from tronpy import Tron
 
-# 配置
-TOKEN = os.environ.get(BOT_TOKEN)
-API_URL = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
+# 第 6 行修正：加上引号，并确保导入了 os
+TOKEN = os.environ.get("BOT_TOKEN") 
+API_URL = f"https://api.telegram.org{TOKEN}/sendMessage"
 
 client = Tron() # 默认连接主网
 tasks = {} # 格式: { "地址": {"last_tx": "ID", "chats": [id1, id2]} }
